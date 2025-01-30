@@ -1,5 +1,7 @@
 button.btn.btn-outline-success {
     background-color: coral;
+    border: coral;
+    color: white;
 }
 
 .column {}
@@ -99,6 +101,8 @@ div.card {
 a.btn.btn-primary {
     background-color: black;
     text-align: end;
+    border: black;
+    color: white;
 
 }
 
@@ -264,7 +268,9 @@ footer {
     background-color: #121212;
     color: white;
     padding: 40px 0;
+    width: 100%;
 }
+
 
 .footer-container {
     display: flex;
@@ -369,6 +375,26 @@ footer {
 /* Base styles remain unchanged */
 
 /* Responsive Design */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .cards, 
+    .cards-2 {
+        justify-content: center;
+        gap: 100px; /* Adjust spacing */
+    }
+
+    .btn-3 {
+        justify-content: flex-start;
+    }
+
+    .heading, .paragraph {
+        text-align: left;
+    }
+}
 @media (max-width: 1024px) {
 
     /* Tablets */
@@ -417,6 +443,9 @@ footer {
     .cards-2 {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 20px; /* Adjust spacing if needed */
+        text-align: center;
     }
 
     img.img-about {
@@ -441,5 +470,20 @@ footer {
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .cards,
+    .cards-2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* Adjust spacing if needed */
+        text-align: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust width for better fit */
+        max-width: 320px; /* Prevent excessive stretching */
     }
 }
